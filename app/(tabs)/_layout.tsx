@@ -1,20 +1,10 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 
-export default function HomeLayout() {
+export default function TabLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: "rgb(191, 0, 255)",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-      }}
-    >
-      <Stack.Screen name="index" />
-      <Stack.Screen name="settings" />
-    </Stack>
+    <Tabs>
+      <Tabs.Screen name="(home)" />
+      <Tabs.Screen name="settings" />
+    </Tabs>
   );
 }

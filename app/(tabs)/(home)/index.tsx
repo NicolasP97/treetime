@@ -12,7 +12,24 @@ export default function HomeScreen() {
       <Text style={styles.textPersonal}>
         Das hier ist Quicksand, wahrscheinlich meine Lieblingsschrift
       </Text>
-      <Link href="../settings">View settings</Link>
+      <Link href="./mainDetails" asChild>
+        <Text style={{ color: "blue" }}>View mainDetails</Text>
+      </Link>
+
+      <Link href="../settings">View Settings</Link>
+
+      <Link href="./details/123" asChild>
+        <Text style={{ color: "blue" }}>View Details of user</Text>
+      </Link>
+
+      <Link
+        href={{
+          pathname: "./details/[id]",
+          params: { id: "bacon" },
+        }}
+      >
+        View user "bacon enjoyer" details
+      </Link>
     </View>
   );
 }

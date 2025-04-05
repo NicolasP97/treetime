@@ -32,19 +32,8 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: "rgb(0, 0, 0)",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-      }}
-    >
-      <Stack.Screen name="index" />
-      <Stack.Screen name="settings" />
+    <Stack>
+      <Stack.Screen name="(tabs)" />
     </Stack>
   );
 }
